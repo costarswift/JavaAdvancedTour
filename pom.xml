@@ -9,5 +9,21 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>LambdaFunction</module>
+    <module>Stream</module>
   </modules>
+
+  <properties>
+    <lombok.version>1.18.8</lombok.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
 </project>
