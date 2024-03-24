@@ -47,6 +47,10 @@ public class StreamFindAndMatch {
                 .findFirst();
         first.ifPresent(author -> System.out.println(author.getName()));
 
+        // 获取一个年龄最小的作家，并输出他的姓名。
+        Optional<Author> first2 = authors.stream().min(Comparator.comparingInt(Author::getAge));
+        first2.ifPresent(author -> System.out.println(author.getName()));
+
         // reduce归并
         /**
          * 对流中的数据按照你指定的计算方式计算出一个结果。（缩减操作）
@@ -63,22 +67,25 @@ public class StreamFindAndMatch {
         Integer sum = authors.stream()
                 .distinct()
                 .map(Author::getAge)
-                .reduce(0, (result, element) -> result + element);
+                .reduce(0, Integer::sum);
         System.out.println(sum);
+
         // 使用reduce求所有作者中年龄的最大值
         Integer max = authors.stream()
                 .map(Author::getAge)
-                .reduce(Integer.MIN_VALUE, (result, element) -> result < element ? element : result);
+                .reduce(Integer.MIN_VALUE, Math::max);
         System.out.println(max);
+
         // 使用reduce求所有作者中年龄的最小值
         Integer min = authors.stream()
                 .map(Author::getAge)
-                .reduce(Integer.MAX_VALUE, (result, element) -> result > element ? element : result);
+                .reduce(Integer.MAX_VALUE, Math::min);
         System.out.println(min);
+
         // 使用reduce求所有作者中年龄的最小值
         Optional<Integer> minOptional = authors.stream()
                 .map(Author::getAge)
-                .reduce((result, element) -> result > element ? element : result);
+                .reduce(Math::min);
         minOptional.ifPresent(System.out::println);
     }
 }

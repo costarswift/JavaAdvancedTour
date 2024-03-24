@@ -7,6 +7,4 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>LambdaFunction</artifactId>
-    <name>Archetype - LambdaFunction</name>
-    <url>http://maven.apache.org</url>
 </project>

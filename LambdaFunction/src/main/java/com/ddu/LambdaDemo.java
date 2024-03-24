@@ -32,6 +32,9 @@ public class LambdaDemo {
         int result1 = calculateNum((left, right) -> left + right);
         System.out.println(result1);
 
+        int result2 = calculateNum(Integer::sum);
+        System.out.println(result2);
+
         printNum(new IntPredicate() {
             @Override
             public boolean test(int value) {
