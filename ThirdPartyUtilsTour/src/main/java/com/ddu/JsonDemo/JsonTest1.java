@@ -18,6 +18,8 @@ public class JsonTest1 {
 
         System.out.println(tom);
         System.out.println(tom1);
-        System.out.println(tom == tom1);
+        System.out.println(tom == tom1); //保装类比较的是内存地址
+
+        System.out.println(tom.equals(tom1)); //equals方法比较的是内部成员变量的值
     }
 }
