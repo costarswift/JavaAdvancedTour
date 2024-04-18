@@ -11,6 +11,7 @@
         <module>LambdaFunction</module>
         <module>Stream</module>
         <module>ThirdPartyUtilsTour</module>
+        <module>ThreadPoolExecute</module>
     </modules>
 
     <properties>
