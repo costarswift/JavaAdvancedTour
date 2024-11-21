@@ -20,6 +20,10 @@ public class CollectionUtilsDemo {
         Set<String> emptySet = Collections.EMPTY_SET;
         Map<String, String> emptyMap = Collections.EMPTY_MAP;
 
+        Set<String> objects1 = SetUtils.emptySet();
+        List<Object> objects2 = Collections.emptyList();
+        Map<Object, Object> objectObjectMap = Collections.emptyMap();
+
         System.out.println("---------------------------------------");
 
         Collection<Object> objects = CollectionUtils.emptyCollection();
